@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Studio 2019 (https://www.liquid-technologies.com) -->
+<GameLibrary>
+    <GameName>text</GameName>
+    <!-- open attributes: all, select, none -->
+    <asset type = "shaders" open = "none">
+        <root>./assets/shaders/</root>
+        <name name="vertexShader01">
+            <file>vertexShader01.glsl</file>
+            <attributes>
+                <type>fragment</type>
+                <info>one</info>
+                <info>two</info>
+            </attributes>
+        </name>
+        <name name="vertexShader01">
+            <file>vertexShader01.glsl</file>
+            <attributes>
+                <type>vertex</type>
+                <info>one</info>
+                <info>two</info>
+                <info>three</info>
+            </attributes>
+        </name>
+    </asset>
+    <asset type = "models" open = "none">
+        <root>./assets/models/</root>
+        <name name="BigFlatTerrain_XYZ_n">
+            <file>BigFlatTerrain_XYZ_n.ply</file>
+            <attributes>
+                <type>ply</type>
+                <format>ascii</format>
+                <vertex>66049</vertex>
+                <property type="float">x</property>
+                <property type="float">y</property>
+                <property type="float">z</property>
+                <property type="float">nx</property>
+                <property type="float">ny</property>
+                <property type="float">nz</property>
+                <face>131072</face>
+                <info>abc</info>
+                <info>one</info>
+                <info>two</info>
+            </attributes>
+        </name>
+    </asset>
+    <asset type = "audios" open = "all" subdir = "true">
+        <root>./assets/audios/</root>
+        <name name="Beer Barrel Polka.flac">
+            <file>music/Beer Barrel Polka.flac</file>
+            <attributes>
+                <type>flac</type>
+                <genre>music</genre>
+                <info>one</info>
+                <info>two</info>
+            </attributes>
+        </name>
+    </asset>
+    <asset type = "audios" open = "all" subdir = "true">
+        <root>./assets/audios/</root>
+        <name name="A man says don-t tell me- let me guess -southern accent- ol.mpeg">
+            <file>effects/A man says don-t tell me- let me guess -southern accent- ol.mpeg</file>
+            <attributes>
+                <type>mpeg</type>
+                <genre>effect</genre>
+                <info>one</info>
+                <info>two</info>
+            </attributes>
+        </name>
+    </asset>
+    <asset type = "videos" open = "none">
+        <root>./assets/videos/</root>
+    </asset>
+    <asset type = "images" open = "none">
+        <root>./assets/images/</root>
+    </asset>
+    <asset type = "fonts" open = "none">
+        <root>./assets/fonts/</root>
+    </asset>
+</GameLibrary>
