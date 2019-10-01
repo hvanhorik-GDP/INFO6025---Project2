@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{56f365bc-c221-4700-b3d2-e44846b326d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window">
+      <UniqueIdentifier>{99b89e41-5860-45e2-8b7b-7c32cebcc40a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Joystick">
+      <UniqueIdentifier>{0735be37-fcd8-4b6b-bbcc-8b669873df6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Keyboard">
+      <UniqueIdentifier>{a5a5d770-1c99-47f5-af00-5fde15845048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Mouse">
+      <UniqueIdentifier>{7bbe5199-c5b2-40d5-853d-55cffcc9f54e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monitor">
+      <UniqueIdentifier>{da6bd6b9-68b1-4a26-9f6c-c2281638195b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{2c3d26bf-37dd-4510-87a3-ac00b906ca58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{c8e3f64d-877a-4abb-8457-ccd7bc0f63f6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine_Window.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_System.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_Monitor.h">
+      <Filter>Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_Joystick.h">
+      <Filter>Joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_iSystem.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_Keyboard.h">
+      <Filter>Keyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_Types.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_Mouse.h">
+      <Filter>Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_WholeFramebuffer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_AsynchronousQueries.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_BoundBuffer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Buffer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_ComputeShader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Debug.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_FragmentShader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_FrameBuffer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Hints.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_PerFragmentOperations.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Pixels.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Program.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Rasterization.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Shader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_State.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Synchronization.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Texture.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Timers.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_VertextArrays.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_VertextAttributes.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_VertextPostProcessing.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_graphics_Vertices.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine_Error.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engine_System.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_iSystem.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_Error.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_Window.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_Joystick.cpp">
+      <Filter>Joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_Keyboard.cpp">
+      <Filter>Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_Monitor.cpp">
+      <Filter>Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_Mouse.cpp">
+      <Filter>Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_Types.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_AsynchronousQueries.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_BoundBuffer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Buffer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_ComputeShader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Debug.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_FragmentShader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_FrameBuffer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Hints.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_PerFragmentOperations.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Pixels.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Program.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Rasterization.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Shader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_State.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Synchronization.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Texture.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Timers.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_VertextArrays.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_VertextAttributes.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_VertextPostProcessing.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_Vertices.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine_graphics_WholeFramebuffer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

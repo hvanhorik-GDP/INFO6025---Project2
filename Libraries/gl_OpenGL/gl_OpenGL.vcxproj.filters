@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="gl_OpenGL.cpp" />
+    <ClCompile Include="glfw_raw\gflw_raw_Cursor.cpp">
+      <Filter>glfw\Cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw_raw\glfw_raw_Error.cpp">
+      <Filter>glfw\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw_raw\glfw_raw_Joystick.cpp">
+      <Filter>glfw\Joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw_raw\glfw_raw_Key.cpp">
+      <Filter>glfw\Keyboard</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw_raw\glfw_raw_Monitor.cpp">
+      <Filter>glfw\Monitor</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw_raw\glfw_raw_Mouse.cpp">
+      <Filter>glfw\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw_raw\glfw_raw_System.cpp">
+      <Filter>glfw\System</Filter>
+    </ClCompile>
+    <ClCompile Include="glfw_raw\glfw_raw_Window.cpp">
+      <Filter>glfw\Window</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gl_OpenGL.h" />
+    <ClInclude Include="gl_raw_defines.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="gl_raw_prototypes.h">
+      <Filter>gl</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\gflw_raw_Cursor.h">
+      <Filter>glfw\Cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\glfw_raw_Common.h">
+      <Filter>glfw\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\glfw_raw_Error.h">
+      <Filter>glfw\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\glfw_raw_Joystick.h">
+      <Filter>glfw\Joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\glfw_raw_Key.h">
+      <Filter>glfw\Keyboard</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\glfw_raw_Monitor.h">
+      <Filter>glfw\Monitor</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\glfw_raw_Mouse.h">
+      <Filter>glfw\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\glfw_raw_System.h">
+      <Filter>glfw\System</Filter>
+    </ClInclude>
+    <ClInclude Include="glfw_raw\glfw_raw_Window.h">
+      <Filter>glfw\Window</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="glfw">
+      <UniqueIdentifier>{7d5571ba-741b-49a1-857d-8b7f6fdba915}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gl">
+      <UniqueIdentifier>{4b4668bb-1437-4f43-89f7-3a4c5d228089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glfw\Common">
+      <UniqueIdentifier>{2bb55f70-6309-4509-8070-a8a79a1407f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glfw\Joystick">
+      <UniqueIdentifier>{d18fd154-399d-446d-a181-c0be55f9bc5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glfw\Cursor">
+      <UniqueIdentifier>{980c71aa-f642-4be2-a7eb-6bb60d1873a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glfw\Keyboard">
+      <UniqueIdentifier>{75c07156-8419-40ab-954f-a6b2b592a5a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glfw\Monitor">
+      <UniqueIdentifier>{3803d1ad-fcc9-4cf9-bdae-5b1c818210b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glfw\Mouse">
+      <UniqueIdentifier>{3fe7e72d-fe56-421a-a420-78592a08a275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glfw\Window">
+      <UniqueIdentifier>{30f04404-68d1-4ff1-8993-fe61dbd9f6f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glfw\System">
+      <UniqueIdentifier>{d9df6b58-06f9-4286-b996-bec4459a5ed1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="glfw_raw\glfw_raw_defines.txt">
+      <Filter>glfw\Common</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

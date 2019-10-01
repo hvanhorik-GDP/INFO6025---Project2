@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{c5a05bb9-98cc-46ee-b500-de66eb67f79c}</ProjectGuid>
+    <RootNamespace>engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
+xcopy /S /D /Y "$(ProjectDir)includes\*.h" "$(SolutionDir).inc\$(ProjectName)*.h"
+xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(SolutionDir)$(Platform)\$(Configuration)\*"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy include files if needed - Turn me on</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
+xcopy /S /D /Y "$(ProjectDir)includes\*.h" "$(SolutionDir).inc\$(ProjectName)*.h"
+xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(SolutionDir)$(Platform)\$(Configuration)\*"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy include files if needed - Turn me on</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
+xcopy /S /D /Y "$(ProjectDir)includes\*.h" "$(SolutionDir).inc\$(ProjectName)*.h"
+xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(SolutionDir)$(Platform)\$(Configuration)\*"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy include files if needed - Turn me on</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
+xcopy /S /D /Y "$(ProjectDir)includes\*.h" "$(SolutionDir).inc\$(ProjectName)*.h"
+xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(SolutionDir)$(Platform)\$(Configuration)\*"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy include files if needed - Turn me on</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="engine_Error.h" />
+    <ClInclude Include="engine_graphics.h" />
+    <ClInclude Include="engine_graphics_AsynchronousQueries.h" />
+    <ClInclude Include="engine_graphics_BoundBuffer.h" />
+    <ClInclude Include="engine_graphics_Buffer.h" />
+    <ClInclude Include="engine_graphics_ComputeShader.h" />
+    <ClInclude Include="engine_graphics_Debug.h" />
+    <ClInclude Include="engine_graphics_FragmentShader.h" />
+    <ClInclude Include="engine_graphics_FrameBuffer.h" />
+    <ClInclude Include="engine_graphics_Hints.h" />
+    <ClInclude Include="engine_graphics_PerFragmentOperations.h" />
+    <ClInclude Include="engine_graphics_Pixels.h" />
+    <ClInclude Include="engine_graphics_Program.h" />
+    <ClInclude Include="engine_graphics_Rasterization.h" />
+    <ClInclude Include="engine_graphics_Shader.h" />
+    <ClInclude Include="engine_graphics_State.h" />
+    <ClInclude Include="engine_graphics_Synchronization.h" />
+    <ClInclude Include="engine_graphics_Texture.h" />
+    <ClInclude Include="engine_graphics_Timers.h" />
+    <ClInclude Include="engine_graphics_VertextArrays.h" />
+    <ClInclude Include="engine_graphics_VertextAttributes.h" />
+    <ClInclude Include="engine_graphics_VertextPostProcessing.h" />
+    <ClInclude Include="engine_graphics_Vertices.h" />
+    <ClInclude Include="engine_graphics_WholeFramebuffer.h" />
+    <ClInclude Include="engine_Joystick.h" />
+    <ClInclude Include="engine_Keyboard.h" />
+    <ClInclude Include="engine_Mouse.h" />
+    <ClInclude Include="engine_System.h" />
+    <ClInclude Include="engine_Monitor.h" />
+    <ClInclude Include="engine_Types.h" />
+    <ClInclude Include="engine_Window.h" />
+    <ClInclude Include="engine_iSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engine_Error.cpp" />
+    <ClCompile Include="engine_graphics.cpp" />
+    <ClCompile Include="engine_graphics_AsynchronousQueries.cpp" />
+    <ClCompile Include="engine_graphics_BoundBuffer.cpp" />
+    <ClCompile Include="engine_graphics_Buffer.cpp" />
+    <ClCompile Include="engine_graphics_ComputeShader.cpp" />
+    <ClCompile Include="engine_graphics_Debug.cpp" />
+    <ClCompile Include="engine_graphics_FragmentShader.cpp" />
+    <ClCompile Include="engine_graphics_FrameBuffer.cpp" />
+    <ClCompile Include="engine_graphics_Hints.cpp" />
+    <ClCompile Include="engine_graphics_PerFragmentOperations.cpp" />
+    <ClCompile Include="engine_graphics_Pixels.cpp" />
+    <ClCompile Include="engine_graphics_Program.cpp" />
+    <ClCompile Include="engine_graphics_Rasterization.cpp" />
+    <ClCompile Include="engine_graphics_Shader.cpp" />
+    <ClCompile Include="engine_graphics_State.cpp" />
+    <ClCompile Include="engine_graphics_Synchronization.cpp" />
+    <ClCompile Include="engine_graphics_Texture.cpp" />
+    <ClCompile Include="engine_graphics_Timers.cpp" />
+    <ClCompile Include="engine_graphics_VertextArrays.cpp" />
+    <ClCompile Include="engine_graphics_VertextAttributes.cpp" />
+    <ClCompile Include="engine_graphics_VertextPostProcessing.cpp" />
+    <ClCompile Include="engine_graphics_Vertices.cpp" />
+    <ClCompile Include="engine_graphics_WholeFramebuffer.cpp" />
+    <ClCompile Include="engine_Joystick.cpp" />
+    <ClCompile Include="engine_Keyboard.cpp" />
+    <ClCompile Include="engine_Monitor.cpp" />
+    <ClCompile Include="engine_Mouse.cpp" />
+    <ClCompile Include="engine_System.cpp" />
+    <ClCompile Include="engine_Types.cpp" />
+    <ClCompile Include="engine_Window.cpp" />
+    <ClCompile Include="engine_iSystem.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

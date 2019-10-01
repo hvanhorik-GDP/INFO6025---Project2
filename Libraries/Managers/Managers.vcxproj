@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{0024213f-8e85-4c5f-ab17-44e28239f28f}</ProjectGuid>
+    <RootNamespace>Managers</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Libraries\gl_OpenGL;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Libraries\gl_OpenGL;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Libraries\gl_OpenGL;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Libraries\gl_OpenGL;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
+xcopy /S /D /Y "$(ProjectDir)includes\*.h" "$(SolutionDir).inc\$(ProjectName)*.h"
+xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(SolutionDir)$(Platform)\$(Configuration)\*"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy include files if needed - Turn me on</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
+xcopy /S /D /Y "$(ProjectDir)includes\*.h" "$(SolutionDir).inc\$(ProjectName)*.h"
+xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(SolutionDir)$(Platform)\$(Configuration)\*"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy include files if needed - Turn me on</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
+xcopy /S /D /Y "$(ProjectDir)includes\*.h" "$(SolutionDir).inc\$(ProjectName)*.h"
+xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(SolutionDir)$(Platform)\$(Configuration)\*"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy include files if needed - Turn me on</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
+xcopy /S /D /Y "$(ProjectDir)includes\*.h" "$(SolutionDir).inc\$(ProjectName)*.h"
+xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(SolutionDir)$(Platform)\$(Configuration)\*"
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy include files if needed - Turn me on</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AssetManager\cAssetManager.cpp" />
+    <ClCompile Include="AssetManager\cAssetManager_Audios.cpp" />
+    <ClCompile Include="AssetManager\cAssetManager_Fonts.cpp" />
+    <ClCompile Include="AssetManager\cAssetManager_Images.cpp" />
+    <ClCompile Include="AssetManager\cAssetManager_Models.cpp" />
+    <ClCompile Include="AssetManager\cAssetManager_Programs.cpp" />
+    <ClCompile Include="AssetManager\cAssetManager_Shaders.cpp" />
+    <ClCompile Include="AssetManager\cAssetManager_Videos.cpp" />
+    <ClCompile Include="AssetManager\cItem_Audio.cpp" />
+    <ClCompile Include="AssetManager\cItem_Common.cpp" />
+    <ClCompile Include="AssetManager\cItem_Font.cpp" />
+    <ClCompile Include="AssetManager\cItem_Image.cpp" />
+    <ClCompile Include="AssetManager\cItem_Model.cpp" />
+    <ClCompile Include="AssetManager\cItem_Program.cpp" />
+    <ClCompile Include="AssetManager\cItem_Shader.cpp" />
+    <ClCompile Include="AssetManager\cItem_Video.cpp" />
+    <ClCompile Include="AssetManager\iAssetManager.cpp" />
+    <ClCompile Include="AssetManager\cAssetManager_impl.cpp" />
+    <ClCompile Include="GameLibrary\AssestRoot.cpp" />
+    <ClCompile Include="GameLibrary\AssetFile.cpp" />
+    <ClCompile Include="GameLibrary\AssetGroups.cpp" />
+    <ClCompile Include="GameLibrary\AssetParts.cpp" />
+    <ClCompile Include="GameLibrary\Assets.cpp" />
+    <ClCompile Include="GameLibrary\GameLibrary.cpp" />
+    <ClCompile Include="GameLibrary\Properties.cpp" />
+    <ClCompile Include="Models\cModelLoader.cpp" />
+    <ClCompile Include="ObjectManagers\cObjectManager_Audio.cpp" />
+    <ClCompile Include="ObjectManagers\cObjectManager.cpp" />
+    <ClCompile Include="ObjectManagers\cObjectManager_impl.cpp" />
+    <ClCompile Include="ObjectManagers\iObjectManager.cpp" />
+    <ClCompile Include="Shaders\cShader.cpp" />
+    <ClCompile Include="Shaders\cProgramLoader.cpp" />
+    <ClCompile Include="Shaders\cShaderLoader.cpp" />
+    <ClCompile Include="Shaders\cShaderManager.cpp" />
+    <ClCompile Include="Shaders\sUniform.cpp" />
+    <ClCompile Include="XML\XMLArrayBase.cpp" />
+    <ClCompile Include="XML\XMLAttribute.cpp" />
+    <ClCompile Include="XML\XMLDocument.cpp" />
+    <ClCompile Include="XML\XMLNodeBase.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AssetManager\cAssetManager.h" />
+    <ClInclude Include="AssetManager\cAssetManager_Audios.h" />
+    <ClInclude Include="AssetManager\cAssetManager_Fonts.h" />
+    <ClInclude Include="AssetManager\cAssetManager_Images.h" />
+    <ClInclude Include="AssetManager\cAssetManager_Models.h" />
+    <ClInclude Include="AssetManager\cAssetManager_Programs.h" />
+    <ClInclude Include="AssetManager\cAssetManager_Shaders.h" />
+    <ClInclude Include="AssetManager\cAssetManager_Videos.h" />
+    <ClInclude Include="AssetManager\cItem_Audio.h" />
+    <ClInclude Include="AssetManager\cItem_Common.h" />
+    <ClInclude Include="AssetManager\cItem_Font.h" />
+    <ClInclude Include="AssetManager\cItem_Image.h" />
+    <ClInclude Include="AssetManager\cItem_Model.h" />
+    <ClInclude Include="AssetManager\cItem_Program.h" />
+    <ClInclude Include="AssetManager\cItem_Shader.h" />
+    <ClInclude Include="AssetManager\cItem_Video.h" />
+    <ClInclude Include="AssetManager\iAssetManager.h" />
+    <ClInclude Include="AssetManager\cAssetManager_impl.h" />
+    <ClInclude Include="GameLibrary\AssestRoot.h" />
+    <ClInclude Include="GameLibrary\AssetFile.h" />
+    <ClInclude Include="GameLibrary\AssetGroups.h" />
+    <ClInclude Include="GameLibrary\AssetParts.h" />
+    <ClInclude Include="GameLibrary\Assets.h" />
+    <ClInclude Include="GameLibrary\GameLibrary.h" />
+    <ClInclude Include="GameLibrary\Properties.h" />
+    <ClInclude Include="Models\cMesh.h" />
+    <ClInclude Include="Models\cModelLoader.h" />
+    <ClInclude Include="ObjectManagers\cObjectManager_Audio.h" />
+    <ClInclude Include="ObjectManagers\cObjectManager.h" />
+    <ClInclude Include="ObjectManagers\cObjectManager_impl.h" />
+    <ClInclude Include="ObjectManagers\iObjectManager.h" />
+    <ClInclude Include="Shaders\cProgramLoader.h" />
+    <ClInclude Include="Shaders\cShaderLoader.h" />
+    <ClInclude Include="Shaders\cShaderManager.h" />
+    <ClInclude Include="Shaders\sUniform.h" />
+    <ClInclude Include="XML\XMLArrayBase.h" />
+    <ClInclude Include="XML\XMLAttribute.h" />
+    <ClInclude Include="XML\XMLDocument.h" />
+    <ClInclude Include="XML\XMLNodeBase.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
