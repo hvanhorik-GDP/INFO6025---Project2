@@ -6,6 +6,9 @@
   <!-- Shaders -->
   <AssetGroup type = "shaders" open = "none">
     <AssetRoot>../assets/shaders/</AssetRoot>
+    <Asset name="NonExistant Shader" type ="fragment">
+      <AssetFile>NonExistant2.glsl</AssetFile>
+    </Asset>
     <Asset name="fragmentShader01" type ="fragment">
       <AssetFile>fragmentShader01.glsl</AssetFile>
     </Asset>
@@ -25,6 +28,9 @@
   <!-- Models -->
   <AssetGroup type = "models" open = "none">
     <AssetRoot>../assets/models/</AssetRoot>
+    <Asset name="NonExistant File">
+      <AssetFile>NonExistant.ply</AssetFile>
+    </Asset>
     <Asset name="BigFlatTerrain_XYZ_n">
       <AssetFile>BigFlatTerrain_XYZ_n.ply</AssetFile>
     </Asset>
@@ -84,6 +90,9 @@
   <!-- Audio files -->
   <AssetGroup type = "audios" open = "all" subdir = "true" subtype="music">
     <AssetRoot>../assets/audios/</AssetRoot>
+    <Asset name="NonExistant File2">
+      <AssetFile>NonExistant2.mp3</AssetFile>
+    </Asset>
     <Asset name= "That's Amore">
       <AssetFile>music/Dean Martin - That's Amore.mp3</AssetFile>
     </Asset>

@@ -4,6 +4,7 @@
 #include "../../AudioEngine/cAudio_System_FMOD.h"
 #include <iostream>
 #include <sstream>
+#include <fstream>
 
 #include <windows.h>
 
@@ -63,29 +64,53 @@ void cAssetManager_Audios::LoadAssets(rapidxml::xml_node<>* parent)
 						if (val == "effects")
 							item->m_subtype = cItem_Audio::subtype::effects;
 						m_map_items[item->GetAssetID()] = item;
+						
+						bool exists = false;	// quick check for file exists
+						std::string errorMessage;
+						{
+							std::ifstream is(fullPath);
+							exists = is.fail() ? false : true;
+						}
+						if (exists)
+						{
+							try {
+								cAudio_Sound_FMOD sound;
+								FMOD_MODE mode = FMOD_CREATESTREAM;
+								implFMOD->CreateSound(sound, fullPath, mode);
+								cAudio_Sound_FMOD::format format = sound.GetFormat();
+								item->m_format.bits = format.bits;
+								item->m_format.channels = format.channels;
+								item->m_format.format = format.format;
+								item->m_format.type = format.type;
 
-						cAudio_Sound_FMOD sound;
-						FMOD_MODE mode = FMOD_CREATESTREAM;
-						implFMOD->CreateSound(sound, fullPath, mode);
+								// Write the properties to the xml file
+								Properties prop = file.GetProperties();
+								prop.AddProperty("exists", std::to_string(false));
+								prop.AddProperty("bits", std::to_string(format.bits));
+								prop.AddProperty("channels", std::to_string(format.channels));
+								prop.AddProperty("format", cAudio_Sound_FMOD::get_format_string(format.format));
+								prop.AddProperty("type", cAudio_Sound_FMOD::get_type_string(format.type));
 
-						cAudio_Sound_FMOD::format format = sound.GetFormat();
-						item->m_format.bits = format.bits;
-						item->m_format.channels = format.channels;
-						item->m_format.format = format.format;
-						item->m_format.type = format.type;
-
-						// Write the properties to the xml file
-						Properties prop = file.GetProperties();
-						prop.AddProperty("bits", std::to_string(format.bits));
-						prop.AddProperty("channels", std::to_string(format.channels));
-						prop.AddProperty("format", cAudio_Sound_FMOD::get_format_string(format.format));
-						prop.AddProperty("type", cAudio_Sound_FMOD::get_type_string(format.type));
-
-						unsigned int length = sound.GetLength();
-						prop.AddProperty("length", std::to_string(length));
-
-						sound.Release();
-//						std::cout << file << std::endl;
+								unsigned int length = sound.GetLength();
+								prop.AddProperty("length", std::to_string(length));
+								sound.Release();
+							}
+							catch (std::exception& ex)
+							{
+								exists = false;
+								errorMessage = ex.what();
+							}
+						}
+						else
+							errorMessage = "File does not exists";
+						if (!exists)
+						{
+							// Error
+							// Write the properties to the xml file
+							Properties prop = file.GetProperties();
+							prop.AddProperty("exists", std::to_string(false));
+							prop.AddProperty("Error", errorMessage);
+						}
 					}
 				}
 			}

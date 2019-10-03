@@ -16,79 +16,96 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{ea73872f-7c9b-4717-84ec-0e95f89466d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\shaders">
+      <UniqueIdentifier>{48568546-8da3-4b7d-86b9-c50a1a4e5c47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\audios">
+      <UniqueIdentifier>{7da66643-2405-4975-830d-f42b066ad34d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\models">
+      <UniqueIdentifier>{cfeb9b90-9368-4b18-8851-36985422a68a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="DnD.xml">
+    <Xml Include="..\assets\GameLibrary.xml">
       <Filter>Assets</Filter>
     </Xml>
-    <Xml Include="xmlfile.xml">
-      <Filter>Assets</Filter>
-    </Xml>
+    <Xml Include="output.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
+    <None Include="..\assets\models\BigFlatTerrain_XYZ_n.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\bun_zipper_res2_XYZ.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\bun_zipper_res2_XYZ_n.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\bun_zipper_res3_XYZ.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\bun_zipper_res3_XYZ_n.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\bun_zipper_res4_XYZ.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\bun_zipper_res4_XYZ_N.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\bun_zipper_XYZ.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\bun_zipper_XYZ_n.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\Cube_1_Unit_from_origin_XYZ_n.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\Sky_Pirate_Combined_xyz.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\Sky_Pirate_Combined_xyz_n.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\Sphere_Radius_1_XYZ_n.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\models\Terrain_XYZ_n.ply">
+      <Filter>Assets\models</Filter>
+    </None>
+    <None Include="..\assets\audios\effects\A man says don-t tell me- let me guess -southern accent- ol.mpeg">
+      <Filter>Assets\audios</Filter>
+    </None>
+    <None Include="..\assets\audios\effects\A woman says chester- walk that dog -old woman- cartoon-_Ni.mpeg">
+      <Filter>Assets\audios</Filter>
+    </None>
+    <None Include="..\assets\audios\effects\A woman says like nails on a blackboard -jewish accent- old.mpeg">
+      <Filter>Assets\audios</Filter>
+    </None>
+    <None Include="..\assets\shaders\fragmentShader01.glsl">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="..\assets\shaders\vertexShader01.glsl">
+      <Filter>Assets\shaders</Filter>
+    </None>
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameLibrary.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameLibraryElements.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="XMLNodeBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="XMLDocument.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="XMLStringCache.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="XMLArrayBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerElements.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CharacterAttributes.cpp">
+    <ClCompile Include="glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameLibrary.h">
+    <ClInclude Include="Callbacks.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameLibraryElements.h">
+    <ClInclude Include="glad.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="XMLNodeBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="XMLDocument.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="XMLStringCache.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="XMLArrayBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerElements.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CharacterAttributes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Xsd Include="DnD Saved.xml">
-      <Filter>Assets</Filter>
-    </Xsd>
   </ItemGroup>
 </Project>

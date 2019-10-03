@@ -3,6 +3,7 @@
 #include "../Shaders/cShaderLoader.h"
 #include <iostream>
 #include <sstream>
+#include <fstream>
 
 cAssetManager_Shaders::cAssetManager_Shaders()
 {
@@ -39,8 +40,7 @@ void cAssetManager_Shaders::LoadAssets(rapidxml::xml_node<>* parent)
 						AssetFile fileName = file.GetAssetFile();
 						Assets_type assetType(file.GetNode());
 						std::string fullPath = rootPath + fileName.GetValue();
-						std::cout << fullPath << std::endl;
-						std::cout << __FILE__ << __LINE__ << "Found an asset TODO" << std::endl;
+
 
 						std::string id = assetName.GetValue();
 						auto parent = file.GetParent();
@@ -52,39 +52,61 @@ void cAssetManager_Shaders::LoadAssets(rapidxml::xml_node<>* parent)
 							item->m_shaderType = cItem_Shader::type::vertex;
 						m_map_items[item->GetAssetID()] = item;
 
-						cShaderLoader loader;
-						bool ok = loader.Load(*item);
-						if (!ok)
+						bool exists = false;	// quick check for file exists
+						std::string errorMessage;
 						{
-							item->m_error = loader.GetLastError();
-							item->m_valid = false;
-							continue;
+							std::ifstream is(fullPath);
+							exists = is.fail() ? false : true;
 						}
-						item->m_valid = true;
-						// Write the properties to the xml file
-						Properties prop = file.GetProperties();
-						prop.AddProperty("isValid", std::to_string(item->m_valid));
-						vecAttributes *vecAtt = loader.GetAttributes();
-						for (auto att : *vecAtt)
+						if (exists)
 						{
-							std::stringstream ss;
-							ss << " id = " << att.m_ID
-								<< " index = " << att.m_index
-								<< " type = " << att.m_type
-								<< " size = " << att.m_size
-								<< " m_name = " << att.m_name;
-							prop.AddProperty("Attribute", ss.str());
+
+							cShaderLoader loader;
+							bool ok = loader.Load(*item);
+							if (!ok)
+							{
+								item->m_error = loader.GetLastError();
+								item->m_valid = false;
+								continue;
+							}
+							item->m_valid = true;
+							// Write the properties to the xml file
+							Properties prop = file.GetProperties();
+							prop.AddProperty("exists", std::to_string(false));
+							prop.AddProperty("isValid", std::to_string(item->m_valid));
+							vecAttributes* vecAtt = loader.GetAttributes();
+							for (auto att : *vecAtt)
+							{
+								std::stringstream ss;
+								ss << " id = " << att.m_ID
+									<< " index = " << att.m_index
+									<< " type = " << att.m_type
+									<< " size = " << att.m_size
+									<< " m_name = " << att.m_name;
+								prop.AddProperty("Attribute", ss.str());
+							}
+							vecUniforms* vecUnif = loader.GetUniforms();
+							for (auto unif : *vecUnif)
+							{
+								std::stringstream ss;
+								ss << " id = " << unif.m_ID
+									<< " index = " << unif.m_index
+									<< " type = " << unif.m_type
+									<< " size = " << unif.m_size
+									<< " m_name = " << unif.m_name;
+								prop.AddProperty("Uniform", ss.str());
+							}
 						}
-						vecUniforms* vecUnif = loader.GetUniforms();
-						for (auto unif : *vecUnif)
+						else
+							errorMessage = "File does not exists";
+
+						if (!exists)
 						{
-							std::stringstream ss;
-							ss << " id = " << unif.m_ID
-								<< " index = " << unif.m_index
-								<< " type = " << unif.m_type
-								<< " size = " << unif.m_size
-								<< " m_name = " << unif.m_name;
-							prop.AddProperty("Uniform", ss.str());
+							// Error
+							// Write the properties to the xml file
+							Properties prop = file.GetProperties();
+							prop.AddProperty("exists", std::to_string(false));
+							prop.AddProperty("Error", errorMessage);
 						}
 					}
 				}

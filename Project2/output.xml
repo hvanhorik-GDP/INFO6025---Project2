@@ -1,0 +1,449 @@
+<GameLibrary>
+	<GameName>Project 1 Audio Test</GameName>
+	<AssetGroup type="shaders" open="none">
+		<AssetRoot>../assets/shaders/</AssetRoot>
+		<Asset name="NonExistant Shader" type="fragment">
+			<AssetFile>NonExistant2.glsl</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="fragmentShader01" type="fragment">
+			<AssetFile>fragmentShader01.glsl</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="vertexShader01" type="vertex">
+			<AssetFile>vertexShader01.glsl</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+	</AssetGroup>
+	<AssetGroup type="programs" open="none">
+		<Asset name="main">
+			<AssetPart>fragmentShader01</AssetPart>
+			<AssetPart>vertexShader01</AssetPart>
+		</Asset>
+	</AssetGroup>
+	<AssetGroup type="models" open="none">
+		<AssetRoot>../assets/models/</AssetRoot>
+		<Asset name="NonExistant File">
+			<AssetFile>NonExistant.ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="BigFlatTerrain_XYZ_n">
+			<AssetFile>BigFlatTerrain_XYZ_n.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="66049"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="float nx"/>
+			<Property type="property" value="float ny"/>
+			<Property type="property" value="float nz"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="131072"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="bun_zipper_XYZ_n">
+			<AssetFile>bun_zipper_XYZ_n.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="35947"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="float nx"/>
+			<Property type="property" value="float ny"/>
+			<Property type="property" value="float nz"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="69451"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="bun_zipper_res2_XYZ">
+			<AssetFile>bun_zipper_res2_XYZ.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="8171"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="16301"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Cube_1_Unit_from_origin_XYZ_n">
+			<AssetFile>Cube_1_Unit_from_origin_XYZ_n.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="26"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="float nx"/>
+			<Property type="property" value="float ny"/>
+			<Property type="property" value="float nz"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="12"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="bun_zipper_res2_XYZ_n">
+			<AssetFile>bun_zipper_res2_XYZ_n.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="8171"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="float nx"/>
+			<Property type="property" value="float ny"/>
+			<Property type="property" value="float nz"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="16301"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Sky_Pirate_Combined_xyz">
+			<AssetFile>Sky_Pirate_Combined_xyz.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="97658"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="59066"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Sky_Pirate_Combined_xyz_n">
+			<AssetFile>Sky_Pirate_Combined_xyz_n.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="97658"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="float nx"/>
+			<Property type="property" value="float ny"/>
+			<Property type="property" value="float nz"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="59066"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Sphere_Radius_1_XYZ_n">
+			<AssetFile>Sphere_Radius_1_XYZ_n.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="642"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="float nx"/>
+			<Property type="property" value="float ny"/>
+			<Property type="property" value="float nz"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="1280"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Terrain_XYZ_n">
+			<AssetFile>Terrain_XYZ_n.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="66049"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="float nx"/>
+			<Property type="property" value="float ny"/>
+			<Property type="property" value="float nz"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="131072"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="bun_zipper_XYZ">
+			<AssetFile>bun_zipper_XYZ.ply</AssetFile>
+			<Property type="type" value="ply"/>
+			<Property type="format" value="ascii"/>
+			<Property type="vertex" value="35947"/>
+			<Property type="property" value="float x"/>
+			<Property type="property" value="float y"/>
+			<Property type="property" value="float z"/>
+			<Property type="property" value="last  list uchar int vertex_indices"/>
+			<Property type="face" value="69451"/>
+			<Property type="valid" value="1"/>
+			<Property type="normals" value="1"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="12953_ChocolateRabbit_v1">
+			<AssetFile>./Bunnies/12953_ChocolateRabbit_v1.ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="17505_Finger_puppet_rabbit_V1">
+			<AssetFile>./Bunnies/17505_Finger_puppet_rabbit_V1.ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="10037_Rabbit_v1_L3">
+			<AssetFile>./Bunnies/10037_Rabbit_v1_L3.ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Bravil">
+			<AssetFile>./Castles/Bravil.ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="10083_Small Castle_v3_L3">
+			<AssetFile>./Castles/10083_Small Castle_v3_L3.ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Castle (2)">
+			<AssetFile>./Castles/Castle (2).ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Castle OBJ">
+			<AssetFile>./Castles/Castle OBJ.ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+		<Asset name="Hogwarts">
+			<AssetFile>./Castles/Hogwarts.ply</AssetFile>
+			<Property type="type" value="unknown"/>
+			<Property type="format" value="unknown"/>
+			<Property type="vertex" value="0"/>
+			<Property type="face" value="0"/>
+			<Property type="valid" value="0"/>
+			<Property type="normals" value="0"/>
+			<Property type="colours" value="0"/>
+		</Asset>
+	</AssetGroup>
+	<AssetGroup type="audios" open="all" subdir="true" subtype="music">
+		<AssetRoot>../assets/audios/</AssetRoot>
+		<Asset name="NonExistant File2">
+			<AssetFile>NonExistant2.mp3</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="That's Amore">
+			<AssetFile>music/Dean Martin - That&apos;s Amore.mp3</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="That's Amore wav">
+			<AssetFile>music/Dean Martin - That&apos;s Amore.wav</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Auld Lang Syne">
+			<AssetFile>music/Guy Lombardo And His Royal Canadians - Auld Lang Syne (Capitol Records 1953).mp3</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Auld Lang Syne wav">
+			<AssetFile>music/Guy Lombardo And His Royal Canadians - Auld Lang Syne (Capitol Records 1953).wav</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Hello, Dolly">
+			<AssetFile>music/Herb Alpert&apos;s Tijuana Brass - Hello, Dolly!.ogg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Hello, Dolly wav">
+			<AssetFile>music/Herb Alpert&apos;s Tijuana Brass - Hello, Dolly!.wav</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Spanish Flea wav">
+			<AssetFile>music/Spanish Flea.wav</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Spanish Flea">
+			<AssetFile>music/Spanish Flea.mp3</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+	</AssetGroup>
+	<AssetGroup type="audios" open="all" subdir="true" subtype="effects">
+		<AssetRoot>../assets/audios/</AssetRoot>
+		<Asset name="let me guess">
+			<AssetFile>effects/A man says don-t tell me- let me guess -southern accent- ol.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="walk that dog">
+			<AssetFile>effects/A woman says chester- walk that dog -old woman- cartoon-_Ni.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="blackboard">
+			<AssetFile>effects/A woman says like nails on a blackboard -jewish accent- old.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="He Was So">
+			<AssetFile>effects/A_L Ploaroid Old Woman - He Was So 01.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="I am not Dead">
+			<AssetFile>effects/A_L Ploaroid Old Woman - I am not Dead 01.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="I had all These Plans">
+			<AssetFile>effects/A_L Ploaroid Old Woman - I had all These Plans 01.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Wasnt My Fault">
+			<AssetFile>effects/A_L Ploaroid Old Woman - Wasnt My Fault 01.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Just An Old Man">
+			<AssetFile>effects/Cartoon Grandpa I-m Just An Old Man.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Let Me Get My Wheelchair">
+			<AssetFile>effects/Cartoon Grandpa Let Me Get My Wheelchair.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="One Good Looking Young Lady">
+			<AssetFile>effects/Cartoon Grandpa Now That-s One Good Looking Young Lady.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Telling You Right">
+			<AssetFile>effects/Cartoon Grandpa Woo Doggy I-m Telling You Right Now.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Way Too Fast">
+			<AssetFile>effects/Cartoon Grandpa You-re Going Way Too Fast.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Old Man Cry">
+			<AssetFile>effects/Cartoon Old Man Cry 3.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="Old Man Pain">
+			<AssetFile>effects/Cartoon Old Man Pain 1.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="sensual giggly laughter">
+			<AssetFile>effects/Mature woman sensual giggly laughter 01.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="belly laughter">
+			<AssetFile>effects/Old male belly laughter.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="strike three">
+			<AssetFile>effects/Old man says baseball umpire strike three you-re out_BLASTW.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+		<Asset name="goal">
+			<AssetFile>effects/Old man says goal_BLASTWAVEFX_16176.mpeg</AssetFile>
+			<Property type="exists" value="0"/>
+			<Property type="Error" value="File does not exists"/>
+		</Asset>
+	</AssetGroup>
+	<AssetGroup type="videos" open="none">
+		<AssetRoot>../assets/videos/</AssetRoot>
+	</AssetGroup>
+	<AssetGroup type="images" open="none">
+		<AssetRoot>../assets/images/</AssetRoot>
+	</AssetGroup>
+	<AssetGroup type="fonts" open="none">
+		<AssetRoot>../assets/fonts/</AssetRoot>
+	</AssetGroup>
+	<Object type="audio" name="sensual giggly laughter" id="xxxx">
+		<AssetId name="sensual giggly laughter"/>
+		<Property name="type" type="string" value="mpeg"/>
+		<Property name="volume" type="int" value="10"/>
+		<Property name="pitch" type="double" value="1"/>
+		<Property name="offset" type="int" value="0"/>
+		<Property name="position" type="vec3" value="1,2,3"/>
+		<Property name="color" type="vec4" value="255,0,0,0"/>
+	</Object>
+	<Object type="group" name="group1" id="xxxy">
+		<ObjectID name="sensual giggly laughter"/>
+		<Property name="position" type="vec3" value="1,2,3"/>
+	</Object>
+	<Object type="group" name="group2" id="xxxz">
+		<ObjectID name="group1"/>
+		<Property name="position" type="vec3" value="1,2,3"/>
+	</Object>
+</GameLibrary>
+

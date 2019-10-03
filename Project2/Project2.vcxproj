@@ -18,6 +18,40 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\assets\GameLibrary.xml" />
+    <Xml Include="output.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\assets\audios\effects\A man says don-t tell me- let me guess -southern accent- ol.mpeg" />
+    <None Include="..\assets\audios\effects\A woman says chester- walk that dog -old woman- cartoon-_Ni.mpeg" />
+    <None Include="..\assets\audios\effects\A woman says like nails on a blackboard -jewish accent- old.mpeg" />
+    <None Include="..\assets\models\BigFlatTerrain_XYZ_n.ply" />
+    <None Include="..\assets\models\bun_zipper_res2_XYZ.ply" />
+    <None Include="..\assets\models\bun_zipper_res2_XYZ_n.ply" />
+    <None Include="..\assets\models\bun_zipper_res3_XYZ.ply" />
+    <None Include="..\assets\models\bun_zipper_res3_XYZ_n.ply" />
+    <None Include="..\assets\models\bun_zipper_res4_XYZ.ply" />
+    <None Include="..\assets\models\bun_zipper_res4_XYZ_N.ply" />
+    <None Include="..\assets\models\bun_zipper_XYZ.ply" />
+    <None Include="..\assets\models\bun_zipper_XYZ_n.ply" />
+    <None Include="..\assets\models\Cube_1_Unit_from_origin_XYZ_n.ply" />
+    <None Include="..\assets\models\Sky_Pirate_Combined_xyz.ply" />
+    <None Include="..\assets\models\Sky_Pirate_Combined_xyz_n.ply" />
+    <None Include="..\assets\models\Sphere_Radius_1_XYZ_n.ply" />
+    <None Include="..\assets\models\Terrain_XYZ_n.ply" />
+    <None Include="..\assets\shaders\fragmentShader01.glsl" />
+    <None Include="..\assets\shaders\vertexShader01.glsl" />
+    <None Include="..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Callbacks.h" />
+    <ClInclude Include="glad.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{57416765-2221-4e5f-9d88-7b3572accb08}</ProjectGuid>
@@ -72,24 +106,24 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Libraries\gl_OpenGL;$(SolutionDir)Libraries\Managers;$(SolutionDir)Libraries\AudioEngine;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
     <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
-    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Libraries\gl_OpenGL;$(SolutionDir)Libraries\Managers;$(SolutionDir)Libraries\AudioEngine;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
     <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Libraries\gl_OpenGL;$(SolutionDir)Libraries\Managers;$(SolutionDir)Libraries\AudioEngine;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
     <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir).inc;$(ProjectDir);$(ProjectDir)include;$(SolutionDir)Libraries\gl_OpenGL;$(SolutionDir)Libraries\Managers;$(SolutionDir)Libraries\AudioEngine;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
     <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
   </PropertyGroup>
@@ -106,6 +140,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Audio_Engine.lib;Managers.lib;fmod_vc.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
@@ -126,6 +161,7 @@ xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(Soluti
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>Audio_Engine.lib;Managers.lib;fmod_vc.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
@@ -146,6 +182,7 @@ xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(Soluti
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>Audio_Engine.lib;Managers.lib;fmod_vc.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
@@ -170,6 +207,7 @@ xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(Soluti
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Audio_Engine.lib;Managers.lib;fmod_vc.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>xcopy /S /D /Y "$(ProjectDir)*.h" "$(SolutionDir).inc\$(ProjectName)\*.h"
@@ -181,41 +219,6 @@ xcopy /S /D /Y "$(ProjectDir)libraries\$(Platform)\$(Configuration)\*" "$(Soluti
       <Message>Copy include files if needed - Turn me on</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <Xml Include="DnD.xml" />
-    <Xml Include="xmlfile.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="CharacterAttributes.cpp" />
-    <ClCompile Include="GameLibrary.cpp" />
-    <ClCompile Include="GameLibraryElements.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayerElements.cpp" />
-    <ClCompile Include="XMLArrayBase.cpp" />
-    <ClCompile Include="XMLDocument.cpp" />
-    <ClCompile Include="XMLNodeBase.cpp" />
-    <ClCompile Include="XMLStringCache.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CharacterAttributes.h" />
-    <ClInclude Include="GameLibrary.h" />
-    <ClInclude Include="GameLibraryElements.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerElements.h" />
-    <ClInclude Include="XMLArrayBase.h" />
-    <ClInclude Include="XMLDocument.h" />
-    <ClInclude Include="XMLNodeBase.h" />
-    <ClInclude Include="XMLStringCache.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Xsd Include="DnD Saved.xml">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </Xsd>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

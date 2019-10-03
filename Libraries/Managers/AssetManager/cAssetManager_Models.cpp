@@ -4,6 +4,7 @@
 #include "../Models/cModelLoader.h"
 #include <iostream>
 #include <sstream>
+#include <fstream>
 
 cAssetManager_Models::cAssetManager_Models()
 {
@@ -48,24 +49,45 @@ void cAssetManager_Models::LoadAssets(rapidxml::xml_node<>* parent)
 						auto val = subtype.GetValue();
 						m_map_items[item->GetAssetID()] = item;
 
-						// TODO - merge mesh and cItem_Model
-						cMesh mesh;
-						cModelLoader loader;
-						// Just load the header for speed
-						bool ok = loader.LoadPlyModelInfo(fullPath, mesh);
-						// Write the properties to the xml file
-						Properties prop = file.GetProperties();
-						prop.AddProperty("type", mesh.m_type);
-						prop.AddProperty("format", mesh.m_format);
-						prop.AddProperty("vertex", std::to_string(mesh.m_vertices));
-						for (auto in : mesh.m_vecProperties)
+
+						bool exists = false;	// quick check for file exists
+						std::string errorMessage;
 						{
-							prop.AddProperty("property", in.first + " " + in.second);
+							std::ifstream is(fullPath);
+							exists = is.fail() ? false : true;
 						}
-						prop.AddProperty("face", std::to_string(mesh.m_faces));
-						prop.AddProperty("valid", std::to_string(mesh.m_isValid));
-						prop.AddProperty("normals", std::to_string(mesh.m_hasNormals));
-						prop.AddProperty("colours", std::to_string(mesh.m_hasColor));
+						if (exists)
+						{
+							// TODO - merge mesh and cItem_Model
+							cMesh mesh;
+							cModelLoader loader;
+							// Just load the header for speed
+							bool ok = loader.LoadPlyModelInfo(fullPath, mesh);
+							// Write the properties to the xml file
+							Properties prop = file.GetProperties();
+							prop.AddProperty("exists", std::to_string(false));
+							prop.AddProperty("type", mesh.m_type);
+							prop.AddProperty("format", mesh.m_format);
+							prop.AddProperty("vertex", std::to_string(mesh.m_vertices));
+							for (auto in : mesh.m_vecProperties)
+							{
+								prop.AddProperty("property", in.first + " " + in.second);
+							}
+							prop.AddProperty("face", std::to_string(mesh.m_faces));
+							prop.AddProperty("valid", std::to_string(mesh.m_isValid));
+							prop.AddProperty("normals", std::to_string(mesh.m_hasNormals));
+							prop.AddProperty("colours", std::to_string(mesh.m_hasColor));
+						} // If (exists)
+						else
+							errorMessage = "File does not exists";
+						if (!exists)
+						{
+							// Error
+							// Write the properties to the xml file
+							Properties prop = file.GetProperties();
+							prop.AddProperty("exists", std::to_string(false));
+							prop.AddProperty("Error", errorMessage);
+						}
 					}
 				}
 			}
